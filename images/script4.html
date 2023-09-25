@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 4th day</title>
+</head>
+<body>
+    <script>
+        function sum(a,b){
+            result=a+b;
+            console.log(result)
+        }
+        sum(2,3)
+
+        let res=(a,b)=>{console.log(a+b)}
+        res(2,6)
+
+        function name(x){
+            console.log(x)
+        }
+
+        let names=(a)=>{console.log(a)}
+        names('hello world')
+
+        // map method
+        var a=[1,2,3,4,5,6]
+        var b=a.map(function(a){
+            console.log(a*2)
+        })
+        var c=a.map(a=>a*5)
+        console.log(c)
+
+        var numbers=[1,2,3,4,5,6,7,8,9,10]
+        var evennumbers=numbers.filter(function(numbers){
+           return numbers %2==0;
+        })
+        console.log(evennumbers)
+
+        var numbers=[1,2,3,4,5,6,7,8,9,10]
+        var evennumbers=numbers.filter(function(numbers){
+           return numbers %2!=0;
+        })
+        console.log(evennumbers)
+
+        var numbers=[1,2,3,4,5,6,7,8,9,10]
+        var evennumbers=numbers.filter(numbers=>numbers %2==0)
+        console.log(evennumbers)
+
+        //sechedulers 
+        function name(x){
+            console.log('hii bro')
+        }
+        setTimeout(name,2000); // it come after what we give the tymlimit
+
+
+        let count=2;
+        function incrementCount(){
+            count++
+            console.log("count:",count)
+        }
+        const intervalId=setInterval(incrementCount,1000) // it makes the continue counting
+        setTimeout(()=>{clearInterval(intervalId)},5000) // it stops from what we gave the limit
+        clearTimeout(intervalId) //stop from the starting
+
+        // callback functions
+        function function1(x,cbf){
+            cbf();
+            console.log(x)
+            console.log('i am f1')
+        }
+        function1('hello',function2)
+
+        function function2(){
+            console.log('i am f2')
+        }
+
+        setTimeout(function(){
+            function2()
+        },1000);
+        
+        
+        
+    </script>
+</body>
+</html>
